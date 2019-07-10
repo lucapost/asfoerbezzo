@@ -1,0 +1,16 @@
+section.end {
+	color: white;
+}
+
+section.end h1 {
+	color: white;
+}
+
+section.end a {
+	color: white;
+}
+
+.reveal .stretch {
+  max-width: 940px;
+  max-height: 600px;
+}
