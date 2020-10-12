@@ -2,6 +2,8 @@
 <html lang="en">
 
 	<head>
+
+
 		<meta charset="utf-8">
 
 		<title>L'ASFO Erbezzo di Stregna: dal recupero dei terreni incolti alla valorizzazione del paesaggio terrazzato</title>
@@ -14,12 +16,14 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/custom.css">
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css" id="theme">
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 		<!--
 		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
-		-->
 		<link rel="stylesheet" href="css/theme/white.css" id="theme"> 
+		-->
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -184,7 +188,7 @@
 					<section>
 						<p>Qual'è il problema paesaggistico nelle Valli del Natisone?</p>
 						<span class="fragment fade-in">
-						<h2>ABBANDONO</h2>
+						<h1>ABBANDONO</h1>
 						<ul>
 							<li>edifici (buone pratica è l'Albergo Diffuso)</li>
 							<li>terreni incolti (PPR: rete ecologica)</li>
@@ -219,13 +223,11 @@
 						</ul>
 						<br/>
 						<br/>
-						<span class="fragment fade-in">
 						<h6>particelle:</h6>
 						<ul>
 							<li>77% con almeno 1 proprietario non residente</li>
 							<li>52% senza proprietari residenti</li>
 						</ul>			
-						</span>			
 					</section>
 				</section>
 				<section>
@@ -346,7 +348,7 @@
 					</section> 
 -->
 					<section>
-						<h6>LR 10/2010 - art. 8 - Entità e modalità di rilascio del contributo</h6>
+						<h6>LR 10/2010 - art. 8 - Entità contributi:</h6>
 						<p><b>Per l'intervento:</b></p>
 						<ul>
 							<li>euro da 3500 a 8000 a ettaro</li>
@@ -396,7 +398,7 @@ il subentro nell’impegno nei confronti del comune da parte di soggetti terzi</
 					<section>
 						<h6>Dov'è nata l'associazione fondiaria?</h6>
 						<ul>
-							<li><b>Francia 1976</b>, association fonciere pastoraux (legge pastorale francese)</li>
+							<li><b>Francia 1976</b>, association fonciere pastoraux</li>
 							<li><b>Italia 2012</b>, Carnino (CN), ...</li>
 						</ul>
 						<img data-src="./images/andrea_cavallero.jpg" class="stretch"/>
@@ -422,7 +424,6 @@ il subentro nell’impegno nei confronti del comune da parte di soggetti terzi</
 							<li>lr 10/2010 per il recupero dei terreni incolti ed abbandonati</li>
 						</ul>
 						</span>
-						<span class="fragment fade-in">
 						<h6>2015</h6>
 						<ul>
 							<li><b>marzo</b>: conferenza introduttiva</li>
@@ -430,7 +431,6 @@ il subentro nell’impegno nei confronti del comune da parte di soggetti terzi</
 							<li><b>estate</b>: problemi lr 10/2010 + moduli di adesione</li>
 							<li><b>dall'autunno</b>: ammissione nuovi soci...</li>
 						</ul>
-						</span>
 					</section>
 					<section>
 						<img data-src="./images/asfoerbezzosocifondatori.jpg" class="stretch"/>
@@ -693,43 +693,36 @@ il subentro nell’impegno nei confronti del comune da parte di soggetti terzi</
 				</section>
 			</div>
 		</div>
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
 		<script>
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
 			Reveal.initialize({
 				controls: true,
 				progress: true,
+				center: true,
+				hash: true,
 				slideNumber: 'c/t',
 				showSlideNumber: 'speaker',
 				history: true,
 				center: true,
-
     				width: 960,
     				height: 700,
-
    				margin: 0.1,
-
     				minScale: 0.2,
     				maxScale: 1.5,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
 			});
 
 		</script>
-
 	</body>
 </html>
